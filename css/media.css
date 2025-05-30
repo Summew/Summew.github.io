@@ -155,3 +155,47 @@
     height: 32px;
   }
 }
+
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+
+  .hero__title {
+    font-size: 26px;
+  }
+  .hero__subtitle {
+    font-size: 20px;
+  }
+
+  .accordion__button {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .review {
+    font-size: 15px;
+  }
+
+  .footer__logo-image {
+    height: 40px;
+  }
+
+  .contacts__social img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .order-form__button {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .about-cards__title {
+    font-size: 18px;
+  }
+
+  .about-cards__text {
+    font-size: 15px;
+  }
+} 

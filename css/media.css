@@ -1,0 +1,123 @@
+/* ======= mobile.css ======= */
+
+@media (max-width: 768px) {
+
+  /* Общая обёртка */
+  body {
+    font-size: 16px;
+  }
+
+  /* Хедер */
+  .header__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .nav__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Главный экран */
+  .hero__title {
+    font-size: 32px;
+  }
+  .hero__subtitle {
+    font-size: 24px;
+  }
+
+  /* Кнопки выбора оформления */
+  .decor__buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .decor__image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Кейтеринг */
+  .catering__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Про нас (карточки) */
+  .about-cards__container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .about-cards__item {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  /* Заказ */
+  .order-section__container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .order-form__input {
+    width: 100%;
+  }
+  .order-contact {
+    align-items: center;
+  }
+
+  /* Отзывы */
+  .reviews__container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .review {
+    padding: 10px;
+  }
+
+  /* Карта */
+  .contacts__map iframe {
+    width: 100% !important;
+    height: 300px;
+  }
+
+  /* Подвал */
+  .footer__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+  }
+  .footer__logo-image {
+    height: 50px;
+  }
+
+  /* Галерея */
+  .gallery__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Меню */
+  .accordion__button {
+    font-size: 18px;
+  }
+  .dish-card {
+    width: 100%;
+  }
+  .accordion__content--open {
+    grid-template-columns: 1fr;
+  }
+
+  /* Контакты */
+  .contacts__info {
+    font-size: 16px;
+  }
+  .contacts__socials {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+  .contacts__social img {
+    width: 32px;
+    height: 32px;
+  }
+}

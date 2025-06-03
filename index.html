@@ -11,17 +11,25 @@
 
     <header class="header">
     <div class="header__container">
-        <div class="header__logo">
-        <img src="img/logo.png" alt="Кафе Барбарис" class="header__logo-image">
-        </div>
-        <nav class="nav header__nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
-          <li class="nav__item"><a href="gallery.html" class="nav__link">Галерея</a></li>
-          <li class="nav__item"><a href="menu.html" class="nav__link">Меню</a></li>
-          <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
-        </ul>
-        </nav>
+    <div class="header__wrapper">
+              <div class="header__logo">
+            <img src="img/logo.png" alt="Кафе Барбарис" class="header__logo-image">
+            </div>
+            <button class="burger" id="burgerBtn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
+            <nav class="nav header__nav" id="mobileNav">
+              <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+                <li class="nav__item"><a href="gallery.html" class="nav__link">Галерея</a></li>
+                <li class="nav__item"><a href="menu.html" class="nav__link">Меню</a></li>
+                <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+              </ul>
+      </nav>
+    </div>
     </div>
     </header>
 <!-- class="hero__image -->
@@ -185,8 +193,6 @@
     </div>
   </div>
 </footer>
-
-
 <script>
   const slider = document.getElementById("heroSlider");
   const dots = document.querySelectorAll(".hero__dot");
@@ -240,6 +246,30 @@
   });
 </script>
 
+<script>
+ const burgerBtn = document.getElementById('burgerBtn');
+  const nav = document.getElementById('mobileNav');
+
+  burgerBtn.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    burgerBtn.classList.toggle('burger--active');
+  });
+
+  document.querySelectorAll('.nav__link').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      burgerBtn.classList.remove('burger--active');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target) && !burgerBtn.contains(e.target)) {
+      nav.classList.remove('open');
+      burgerBtn.classList.remove('burger--active');
+    }
+  });
+
+</script>
 
 
 </body>

@@ -11,25 +11,24 @@
 
     <header class="header">
     <div class="header__container">
-    <div class="header__wrapper">
-              <div class="header__logo">
-            <img src="img/logo.png" alt="Кафе Барбарис" class="header__logo-image">
-            </div>
-            <button class="burger" id="burgerBtn">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-
-            <nav class="nav header__nav" id="mobileNav">
-              <ul class="nav__list">
-                <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
-                <li class="nav__item"><a href="gallery.html" class="nav__link">Галерея</a></li>
-                <li class="nav__item"><a href="menu.html" class="nav__link">Меню</a></li>
-                <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
-              </ul>
-      </nav>
-    </div>
+      <div class="header__wrapper">
+        <div class="header__logo">
+        <img src="img/logo.png" alt="Кафе Барбарис" class="header__logo-image">
+        </div>
+        <button class="burger" id="burgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      </div>
+        <nav class="nav header__nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+          <li class="nav__item"><a href="gallery.html" class="nav__link">Галерея</a></li>
+          <li class="nav__item"><a href="menu.html" class="nav__link">Меню</a></li>
+          <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+        </ul>
+        </nav>
     </div>
     </header>
 <!-- class="hero__image -->
@@ -193,6 +192,8 @@
     </div>
   </div>
 </footer>
+
+
 <script>
   const slider = document.getElementById("heroSlider");
   const dots = document.querySelectorAll(".hero__dot");
@@ -221,34 +222,8 @@
 </script>
 
 <script>
-  const buttons = document.querySelectorAll(".decor__button");
-  const image = document.getElementById("decorImage");
-
-  buttons.forEach(button => {
-    button.addEventListener("click", () => {
-      const color = button.dataset.color;
-      const newSrc = `img/decor-${color}.jpg`;
-
-      image.classList.add("decor__image--hide");
-
-      setTimeout(() => {
-        image.setAttribute("src", newSrc);
-        image.setAttribute("alt", `Оформление ${color}`);
-
-        image.classList.remove("decor__image--hide");
-        image.classList.add("decor__image--show");
-
-        setTimeout(() => {
-          image.classList.remove("decor__image--show");
-        }, 400);
-      }, 300);
-    });
-  });
-</script>
-
-<script>
- const burgerBtn = document.getElementById('burgerBtn');
-  const nav = document.getElementById('mobileNav');
+  const burgerBtn = document.getElementById('burgerBtn');
+  const nav = document.querySelector('.header__nav');
 
   burgerBtn.addEventListener('click', () => {
     nav.classList.toggle('open');
@@ -268,8 +243,9 @@
       burgerBtn.classList.remove('burger--active');
     }
   });
-
 </script>
+
+
 
 
 </body>

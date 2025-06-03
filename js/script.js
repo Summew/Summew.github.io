@@ -17,7 +17,7 @@
   });
 
   const burgerBtn = document.getElementById('burgerBtn');
-  const nav = document.getElementById('mobileNav');
+  const nav = document.querySelector('.header__nav');
 
   burgerBtn.addEventListener('click', () => {
     nav.classList.toggle('open');
@@ -37,4 +37,3 @@
       burgerBtn.classList.remove('burger--active');
     }
   });
-

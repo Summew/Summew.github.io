@@ -721,12 +721,8 @@ img {
   border: none;
   cursor: pointer;
   z-index: 1001;
-} 
-
-.header__wrapper
-{
-  display: flex;
 }
+
 .burger span {
   display: block;
   height: 12px;
@@ -735,29 +731,9 @@ img {
   border-radius: 3px;
 }
 
-/* Навигация скрыта на мобилке, пока не активна */
-.header__nav {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 240px;
-  height: 100%;
-  background-color: #5e2b1d;
-  padding: 60px 20px;
-  transition: right 0.3s ease;
+.header__wrapper
+{
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  z-index: 1000;
-}
-
-.header__nav.open {
-  right: 0;
-}
-
-.nav__list {
-  flex-direction: column;
-  gap: 20px;
 }
 
 .burger--active span {

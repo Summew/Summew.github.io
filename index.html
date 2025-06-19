@@ -245,7 +245,25 @@
   });
 </script>
 
+<script>
+    const buttons = document.querySelectorAll('.decor__button');
+  const image = document.getElementById('decorImage');
 
+  const decorImages = {
+    red: 'img/decor-red.png',
+    yellow: 'img/decor-yellow.PNG',
+    green: 'img/decor-green.png',
+    blue: 'img/decor-blue.png',
+    purple: 'img/decor-purple.png'
+  };
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const color = button.getAttribute('data-color');
+      image.src = decorImages[color];
+    });
+  });
+</script>
 
 
 </body>
